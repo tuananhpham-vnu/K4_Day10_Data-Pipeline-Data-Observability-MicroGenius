@@ -25,7 +25,7 @@
     "judge": {
       "score": 5,
       "correct": true,
-      "reasoning": "The model answer is identical to the reference answer, accurately capturing the core topic of the paper."
+      "reasoning": "The model answer is an exact match to the reference answer."
     }
   },
   {
@@ -54,7 +54,7 @@
     "judge": {
       "score": 5,
       "correct": true,
-      "reasoning": "The model answer perfectly matches the reference answer containing all the authors."
+      "reasoning": "The model answer perfectly matches the reference answer containing the authors of the paper."
     }
   },
   {
@@ -112,7 +112,7 @@
     "judge": {
       "score": 5,
       "correct": true,
-      "reasoning": "Both the reference answer and the model answer correctly indicate that the categories are unknown."
+      "reasoning": "Both the model answer and the reference answer are 'unknown'."
     }
   },
   {
@@ -228,7 +228,7 @@
     "judge": {
       "score": 5,
       "correct": true,
-      "reasoning": "Both the reference answer and the model answer correctly state 'unknown' as the category information is not provided."
+      "reasoning": "Both the reference answer and the model answer correctly state 'unknown' for the paper's categories based on the available data."
     }
   },
   {
@@ -286,7 +286,7 @@
     "judge": {
       "score": 5,
       "correct": true,
-      "reasoning": "The model answer correctly identifies the author as Haopeng Yang, matching the reference answer."
+      "reasoning": "The model answer correctly identifies the author of the specified paper as Haopeng Yang, matching the reference answer."
     }
   },
   {
@@ -344,7 +344,7 @@
     "judge": {
       "score": 5,
       "correct": true,
-      "reasoning": "Both the reference answer and the model answer correctly indicate that the category is unknown based on the provided context."
+      "reasoning": "Both the reference answer and the model answer correctly state 'unknown' since the categories were not provided in the question context."
     }
   },
   {
@@ -402,7 +402,7 @@
     "judge": {
       "score": 5,
       "correct": true,
-      "reasoning": "The model answer perfectly matches the reference answer containing all the authors."
+      "reasoning": "The model answer exactly matches the reference answer containing all authors of the paper."
     }
   },
   {
@@ -460,7 +460,7 @@
     "judge": {
       "score": 5,
       "correct": true,
-      "reasoning": "Both the model answer and the reference answer correctly state that the category is unknown."
+      "reasoning": "Both the model answer and the reference answer correctly state 'unknown' as the category information is not provided."
     }
   },
   {
@@ -489,7 +489,7 @@
     "judge": {
       "score": 5,
       "correct": true,
-      "reasoning": "The model answer matches the reference answer exactly."
+      "reasoning": "The model answer is identical to the reference answer, accurately reflecting the context of the paper regarding Clinical Decision Support Systems (CDSS)."
     }
   },
   {
@@ -518,7 +518,7 @@
     "judge": {
       "score": 5,
       "correct": true,
-      "reasoning": "The model answer correctly identifies the authors of the specified paper, matching the reference answer exactly."
+      "reasoning": "The model answer matches the reference answer exactly."
     }
   },
   {
@@ -576,7 +576,7 @@
     "judge": {
       "score": 5,
       "correct": true,
-      "reasoning": "Both the model answer and reference answer correctly indicate that the information is unknown."
+      "reasoning": "Both the model answer and the reference answer correctly state that the categories are unknown."
     }
   }
 ]
