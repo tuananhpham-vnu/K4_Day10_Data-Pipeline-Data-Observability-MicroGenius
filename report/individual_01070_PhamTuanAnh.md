@@ -11,6 +11,7 @@
 | Vai trò chính    | Vai trò 1 — Pipeline integrator (lead), Nhóm 4 người                 |
 | Repository         | https://github.com/tuananhpham-vnu/K4_Day10_Data-Pipeline-Data-Observability-MicroGenius |
 | Ngày hoàn thành | 2026-08-06               |
+| Module/deliverable sở hữu | `src/core/config.py` (contract), `src/pipelines/phase1.py`, `src/pipelines/corruption_flow.py` — orchestration baseline và corruption flow |
 
 ## 2. Vai trò và phạm vi công việc
 
@@ -21,6 +22,9 @@
 | Baseline pipeline orchestration | `src/pipelines/phase1.py::main` | Settings, raw/clean data, test set | `data/results/baseline_metrics.json`, `baseline_answers.json`, `data/quality/phase1_quality.json`, `freshness_report.json`, `data/reports/phase1_report.md` | Hoàn thành |
 | Corruption/repair orchestration | `src/pipelines/corruption_flow.py::main` | Clean baseline df, baseline metrics, raw records | `data/clean/papers_clean_corrupted.*`, `papers_clean_repaired.*`, corrupted/repaired metrics & quality/freshness, `data/reports/corruption_report.md` | Hoàn thành |
 | Settings/paths contract | `src/core/config.py` (chỉ đọc, không sửa) | `.env` | `Settings`, `Paths` dùng chung cho toàn pipeline | Hoàn thành (kế thừa, xác minh contract) |
+| Lập kế hoạch & quản lý checkpoint | `phan-cong-day-10-data-pipeline-4h(2).html` (checkpoint timer, cấu hình Nhóm 4) | Nội dung lab, quy tắc chung, thời lượng phiên 4 giờ | 7 checkpoint (CP0–CP6) có khung giờ và pass criteria riêng, dùng để điều phối cả nhóm | Hoàn thành |
+| Chia kế hoạch theo vai trò | Phân công 4 vai trò (lead/ingest\|clean/rag/eval\|observe) theo file/module | Danh sách module cần hoàn thành trong repo | Bảng phân công trong `report/group_report.md` mục 1 — mỗi vai trò có owner, input, output rõ ràng | Hoàn thành |
+| Quản lý branch & merge feature vào pipeline | Nhánh `main`/`tuananh`/`DungMai`, Pull Request | Feature branch của từng thành viên (ingestion/cleaning, eval/observability, orchestration) | Lịch sử merge qua PR (PR #1 `DungMai`, PR #3 `tuananh`) vào `main` không ghi đè contract chung; chi tiết ở mục 11 | Hoàn thành một phần — 2/4 thành viên đã có nhánh/PR, còn thiếu nhánh của Thương và Đức Anh |
 
 Chỉ nhận ownership cho phần bạn trực tiếp thực hiện. Liên hệ rõ phần việc của bạn với đầu vào, đầu ra và các thành viên phụ thuộc vào phần đó.
 
@@ -31,6 +35,7 @@ Chỉ nhận ownership cho phần bạn trực tiếp thực hiện. Liên hệ 
 | Sửa lỗi import sai trong `src/observability/__init__.py` (đang import từ `evaluation` do copy-paste nhầm) | Vai trò 4 (eval/observe) | Package `observability` import được, không còn `ModuleNotFoundError: No module named 'observability.metrics'` |
 | Thêm fallback category trong `src/ingestion/cleaning.py` khi Crossref không trả `subject` | Vai trò 2 (ingest/clean) | `categories_joined` không còn rỗng cho mọi bản ghi, `build_test_set` tạo được test set thay vì lỗi "0 complete papers" |
 | Sửa lỗi double-client Chroma trong `src/retrieval/index.py::LocalEmbeddingIndex.build` | Vai trò 3 (rag) | Query ngay sau khi build index không còn văng `chromadb.errors.NotFoundError` |
+| Điều phối kế hoạch checkpoint (CP0–CP6) và review/merge Pull Request | Cả 4 vai trò | PR #1 (`DungMai` — testset/eval/observability) và PR #3 (`tuananh` — ingest/orchestration) merge vào `main` không xung đột; contract chung (`core/config.py`) được giữ ổn định trong suốt quá trình merge |
 
 ## 3. Kết quả theo vai trò
 
