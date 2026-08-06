@@ -228,6 +228,7 @@ def run_data_quality_checks(
         settings,
         (
             "freshness_max_age_days",
+            "freshness_threshold_days",
             "max_age_days",
             "stale_after_days",
             "freshness_days",
@@ -379,6 +380,7 @@ def build_freshness_report(
         settings,
         (
             "freshness_max_age_days",
+            "freshness_threshold_days",
             "max_age_days",
             "stale_after_days",
             "freshness_days",

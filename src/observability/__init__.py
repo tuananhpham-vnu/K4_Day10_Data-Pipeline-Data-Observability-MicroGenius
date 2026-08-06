@@ -1,11 +1,11 @@
-"""Public API for the evaluation package."""
+"""Public API for data quality and freshness observability."""
 
-from .metrics import EvaluationBundle, JudgeVerdict, evaluate_pipeline
-from .testset import build_test_set
+from .quality import build_freshness_report, run_data_quality_checks
+from .reporting import generate_corruption_report, generate_phase1_report
 
 __all__ = [
-    "EvaluationBundle",
-    "JudgeVerdict",
-    "build_test_set",
-    "evaluate_pipeline",
+    "build_freshness_report",
+    "generate_corruption_report",
+    "generate_phase1_report",
+    "run_data_quality_checks",
 ]

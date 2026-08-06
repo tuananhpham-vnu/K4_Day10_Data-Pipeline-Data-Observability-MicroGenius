@@ -68,9 +68,9 @@ def _resolve_columns(df: pd.DataFrame) -> dict[str, str]:
             None,
         )
 
-        if match is None:
+        if match is None and canonical != "categories":
             missing.append(f"{canonical} ({', '.join(aliases)})")
-        else:
+        elif match is not None:
             resolved[canonical] = match
 
     if missing:
@@ -232,11 +232,15 @@ def _question_rows(
     published: str,
     categories: list[str],
 ) -> list[dict[str, Any]]:
-    """Create four QA-compatible test cases for one paper."""
+    """Create QA-compatible test cases for one paper.
+
+    Category questions are only created when the source contains categories;
+    Crossref records are allowed to omit that field.
+    """
     # qa.py extracts title using r"'([^']+)'".
     safe_title = title.replace("'", "’")
 
-    facts = (
+    facts = [
         (
             "summary",
             f"What is the paper '{safe_title}' about?",
@@ -252,12 +256,16 @@ def _question_rows(
             f"When was the paper '{safe_title}' published?",
             published,
         ),
-        (
-            "categories",
-            f"What categories does the paper '{safe_title}' belong to?",
-            ", ".join(categories),
-        ),
-    )
+    ]
+
+    if categories:
+        facts.append(
+            (
+                "categories",
+                f"What categories does the paper '{safe_title}' belong to?",
+                ", ".join(categories),
+            )
+        )
 
     return [
         {
@@ -281,8 +289,9 @@ def build_test_set(
 ) -> list[dict[str, Any]]:
     """Build and persist a deterministic evaluation set from cleaned papers.
 
-    Up to five representative papers are selected. Four questions are created
-    for every selected paper: summary, authors, publication date and categories.
+    Up to five representative papers are selected. Summary, authors and
+    publication-date questions are created for every selected paper; a
+    categories question is added only when category data is available.
 
     ``ground_truth_doc_ids`` always contains the cleaned ``paper_id`` so it can
     be compared directly with ``AnswerResult.retrieved_doc_ids``.
@@ -317,7 +326,11 @@ def build_test_set(
         summary = _as_text(row[columns["summary"]])
         authors = _as_items(row[columns["authors"]])
         published = _format_date(row[columns["date"]])
-        categories = _as_items(row[columns["categories"]])
+        categories = (
+            _as_items(row[columns["categories"]])
+            if "categories" in columns
+            else []
+        )
 
         if not all(
             (
@@ -326,7 +339,6 @@ def build_test_set(
                 summary,
                 authors,
                 published,
-                categories,
             )
         ):
             continue
@@ -365,10 +377,10 @@ def build_test_set(
 
     test_set: list[dict[str, Any]] = []
 
-    for paper_index, paper in enumerate(selected):
+    for paper in selected:
         test_set.extend(
             _question_rows(
-                sequence_start=paper_index * 4 + 1,
+                sequence_start=len(test_set) + 1,
                 paper_id=paper["paper_id"],
                 title=paper["title"],
                 summary=paper["summary"],
