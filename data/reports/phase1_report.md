@@ -1,6 +1,6 @@
 # Phase 1 — Baseline Evaluation Report
 
-- **Generated at:** 2026-08-06T10:01:04.183925Z
+- **Generated at:** 2026-08-06T10:13:04.184258Z
 - **Overall data status:** **PASS**
 - **Data quality:** PASS
 - **Freshness:** PASS
@@ -17,7 +17,6 @@
 | test_set_size | 20 |
 | collection_name | papers-baseline |
 | embedding_model | sentence-transformers/all-MiniLM-L6-v2 |
-| generated_at | 2026-08-06T09:59:31.824665+00:00 |
 
 ## 2. Retrieval and answer quality
 
@@ -87,8 +86,8 @@ The baseline dataset passed the configured quality and freshness gates. The RAG 
 ```json
 {
   "report_name": "phase1_quality",
-  "generated_at": "2026-08-06T10:01:04.180923Z",
-  "as_of": "2026-08-06T10:01:04.178925Z",
+  "generated_at": "2026-08-06T10:13:04.180285Z",
+  "as_of": "2026-08-06T10:13:04.178259Z",
   "source_timestamp": null,
   "row_count": 24,
   "column_count": 13,
@@ -128,7 +127,7 @@ The baseline dataset passed the configured quality and freshness gates. The RAG 
   "thresholds": {
     "minimum_rows": 1,
     "minimum_summary_characters": 80,
-    "maximum_age_days": 3650
+    "maximum_age_days": 180
   },
   "checks": {
     "row_count": {
@@ -174,7 +173,7 @@ The baseline dataset passed the configured quality and freshness gates. The RAG 
       "passed": true,
       "published_column": "published",
       "age_days_column": "age_days",
-      "maximum_age_days": 3650,
+      "maximum_age_days": 180,
       "invalid_age_rows": 0,
       "stale_rows": 0,
       "future_rows": 0,
@@ -193,14 +192,14 @@ The baseline dataset passed the configured quality and freshness gates. The RAG 
 
 ```json
 {
-  "generated_at": "2026-08-06T10:01:04.182925Z",
-  "as_of": "2026-08-06T10:01:04.181924Z",
+  "generated_at": "2026-08-06T10:13:04.182256Z",
+  "as_of": "2026-08-06T10:13:04.181272Z",
   "source_timestamp": null,
   "published_column": "published",
   "age_days_column": "age_days",
   "latest_published": "2026-08-01T00:00:00Z",
   "oldest_published": "2026-02-12T00:00:00Z",
-  "maximum_age_days": 3650,
+  "maximum_age_days": 180,
   "stale_rows": 0,
   "fresh_rows": 24,
   "future_rows": 0,

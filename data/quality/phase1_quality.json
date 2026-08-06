@@ -1,7 +1,7 @@
 {
   "report_name": "phase1_quality",
-  "generated_at": "2026-08-06T10:01:04.180923Z",
-  "as_of": "2026-08-06T10:01:04.178925Z",
+  "generated_at": "2026-08-06T10:13:04.180285Z",
+  "as_of": "2026-08-06T10:13:04.178259Z",
   "source_timestamp": null,
   "row_count": 24,
   "column_count": 13,
@@ -41,7 +41,7 @@
   "thresholds": {
     "minimum_rows": 1,
     "minimum_summary_characters": 80,
-    "maximum_age_days": 3650
+    "maximum_age_days": 180
   },
   "checks": {
     "row_count": {
@@ -87,7 +87,7 @@
       "passed": true,
       "published_column": "published",
       "age_days_column": "age_days",
-      "maximum_age_days": 3650,
+      "maximum_age_days": 180,
       "invalid_age_rows": 0,
       "stale_rows": 0,
       "future_rows": 0,
