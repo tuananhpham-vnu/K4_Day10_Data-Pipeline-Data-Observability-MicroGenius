@@ -25,7 +25,7 @@
     "judge": {
       "score": 5,
       "correct": true,
-      "reasoning": "The model answer is an exact match to the reference answer."
+      "reasoning": "The model answer is identical to the reference answer, accurately reflecting the core topic of the paper regarding SafeRAG and automated safety report generation in high-risk industries."
     }
   },
   {
@@ -54,7 +54,7 @@
     "judge": {
       "score": 5,
       "correct": true,
-      "reasoning": "The model answer matches the reference answer exactly."
+      "reasoning": "The model answer correctly lists all the authors provided in the reference answer."
     }
   },
   {
@@ -83,7 +83,7 @@
     "judge": {
       "score": 5,
       "correct": true,
-      "reasoning": "The model answer matches the reference answer exactly."
+      "reasoning": "The model answer exactly matches the reference answer."
     }
   },
   {
@@ -112,7 +112,7 @@
     "judge": {
       "score": 5,
       "correct": true,
-      "reasoning": "Both the model and reference correctly identify that the information is unknown."
+      "reasoning": "Both the reference answer and the model answer correctly indicate that the categories are unknown."
     }
   },
   {
@@ -228,7 +228,7 @@
     "judge": {
       "score": 5,
       "correct": true,
-      "reasoning": "Both the reference answer and the model answer correctly indicate that the category is unknown."
+      "reasoning": "Both the reference answer and the model answer correctly state 'unknown' as the category information is not provided."
     }
   },
   {
@@ -257,7 +257,7 @@
     "judge": {
       "score": 5,
       "correct": true,
-      "reasoning": "The model answer is identical to the reference answer."
+      "reasoning": "The model answer matches the reference answer exactly and is factually correct."
     }
   },
   {
@@ -286,7 +286,7 @@
     "judge": {
       "score": 5,
       "correct": true,
-      "reasoning": "The model answer correctly identifies the author as Haopeng Yang, matching the reference answer."
+      "reasoning": "The model answer correctly identifies the author as Haopeng Yang, which matches the reference answer."
     }
   },
   {
@@ -344,7 +344,7 @@
     "judge": {
       "score": 5,
       "correct": true,
-      "reasoning": "Both the model and reference answers correctly indicate that the categories are unknown."
+      "reasoning": "Both the model answer and the reference answer correctly state that the categories are unknown."
     }
   },
   {
@@ -373,7 +373,7 @@
     "judge": {
       "score": 5,
       "correct": true,
-      "reasoning": "The model answer is identical to the reference answer and correctly identifies the context of the paper."
+      "reasoning": "The model answer is an exact match to the reference answer, accurately reflecting the introductory context of the paper regarding mental health conditions."
     }
   },
   {
@@ -402,7 +402,7 @@
     "judge": {
       "score": 5,
       "correct": true,
-      "reasoning": "The model answer perfectly matches the reference answer containing all the authors' names."
+      "reasoning": "The model answer exactly matches the reference answer containing all authors of the paper."
     }
   },
   {
@@ -431,7 +431,7 @@
     "judge": {
       "score": 5,
       "correct": true,
-      "reasoning": "The model answer matches the reference answer exactly."
+      "reasoning": "The model answer matches the reference date exactly."
     }
   },
   {
@@ -460,7 +460,7 @@
     "judge": {
       "score": 5,
       "correct": true,
-      "reasoning": "Both the model answer and reference answer correctly state 'unknown' as the categories are not provided or recognized."
+      "reasoning": "Both the model answer and reference answer correctly state 'unknown' since the exact categories are not provided or determinable from the given context."
     }
   },
   {
@@ -518,7 +518,7 @@
     "judge": {
       "score": 5,
       "correct": true,
-      "reasoning": "The model answer correctly identifies both authors as specified in the reference answer."
+      "reasoning": "The model answer matches the reference answer exactly."
     }
   },
   {
@@ -576,7 +576,7 @@
     "judge": {
       "score": 5,
       "correct": true,
-      "reasoning": "Both the model answer and the reference answer correctly state 'unknown'."
+      "reasoning": "Both the model and reference answers correctly indicate that the categories are unknown."
     }
   }
 ]

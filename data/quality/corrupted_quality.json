@@ -1,7 +1,7 @@
 {
-  "report_name": "phase1_quality",
-  "generated_at": "2026-08-06T09:54:22.728408Z",
-  "as_of": "2026-08-06T09:54:22.685815Z",
+  "report_name": "corrupted_quality",
+  "generated_at": "2026-08-06T09:56:21.549281Z",
+  "as_of": "2026-08-06T09:56:21.480860Z",
   "source_timestamp": null,
   "row_count": 24,
   "column_count": 13,
@@ -23,7 +23,7 @@
   "null_counts": {
     "paper_id": 0,
     "title": 0,
-    "summary": 0,
+    "summary": 5,
     "authors_joined": 0,
     "categories_joined": 0,
     "primary_category": 0,
@@ -33,10 +33,10 @@
     "summary_chars": 0,
     "text_for_embedding": 0,
     "abs_url": 0,
-    "pdf_url": 16
+    "pdf_url": 17
   },
-  "total_null_count": 16,
-  "duplicate_count": 0,
+  "total_null_count": 22,
+  "duplicate_count": 2,
   "stale_rows": 0,
   "thresholds": {
     "minimum_rows": 1,
@@ -57,11 +57,11 @@
       "failed_rows": 0
     },
     "paper_id_unique": {
-      "passed": true,
+      "passed": false,
       "column": "paper_id",
-      "duplicate_rows": 0,
-      "duplicate_values": 0,
-      "failed_rows": 0
+      "duplicate_rows": 2,
+      "duplicate_values": 2,
+      "failed_rows": 2
     },
     "title_not_null": {
       "passed": true,
@@ -70,18 +70,18 @@
       "failed_rows": 0
     },
     "summary_length": {
-      "passed": true,
+      "passed": false,
       "column": "summary",
       "minimum_characters": 80,
-      "null_rows": 0,
-      "short_rows": 0,
+      "null_rows": 5,
+      "short_rows": 5,
       "length_stats": {
-        "min": 834,
-        "median": 1661.0,
-        "mean": 1728.0,
+        "min": 0,
+        "median": 1573.0,
+        "mean": 1398.4583333333333,
         "max": 2610
       },
-      "failed_rows": 0
+      "failed_rows": 5
     },
     "freshness": {
       "passed": true,
@@ -94,9 +94,12 @@
       "failed_rows": 0
     }
   },
-  "passed_checks": 6,
-  "failed_checks": [],
-  "is_valid": true,
-  "passed": true,
-  "report_path": "data\\quality\\phase1_quality.json"
+  "passed_checks": 4,
+  "failed_checks": [
+    "paper_id_unique",
+    "summary_length"
+  ],
+  "is_valid": false,
+  "passed": false,
+  "report_path": "data\\quality\\corrupted_quality.json"
 }
