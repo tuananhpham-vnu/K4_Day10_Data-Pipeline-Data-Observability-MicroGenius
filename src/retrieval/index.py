@@ -121,12 +121,23 @@ class LocalEmbeddingIndex:
                 "documents": documents,
             },
         )
-        return cls(
-            settings=settings,
-            collection_name=collection_name,
-            documents=documents,
-            persist_path=persist_path,
-        )
+
+        # Reuse the client/collection created above instead of opening a
+        # second PersistentClient at the same path: two clients in the same
+        # process race on the underlying sqlite store and the second one can
+        # fail to see the collection just created by the first.
+        instance = cls.__new__(cls)
+        instance.settings = settings
+        instance.collection_name = collection_name
+        instance.documents = documents
+        instance.persist_path = persist_path
+        instance.embedding_backend = "chroma"
+        instance.embedding_model = embedding_model
+        instance.client = client
+        instance.collection = collection
+        instance.documents_by_paper_id = {document["paper_id"].lower(): document for document in documents}
+        instance.documents_by_title = {document["title"].lower(): document for document in documents}
+        return instance
 
     @classmethod
     def load(cls, settings: Settings, embeddings_path: Path | None = None) -> "LocalEmbeddingIndex":

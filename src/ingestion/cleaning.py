@@ -31,6 +31,11 @@ def build_clean_dataframe(records: list[PaperRecord], run_date: datetime) -> pd.
 
         authors = list(dict.fromkeys(a for a in (record.authors or []) if a))
         categories = list(dict.fromkeys(c for c in (record.categories or []) if c))
+        if not categories and record.primary_category:
+            # Crossref rarely returns `subject` anymore; fall back to the
+            # PaperRecord's primary_category so downstream test-set/quality
+            # checks always see a non-empty category value.
+            categories = [record.primary_category]
         authors_joined = compact_join(authors)
         categories_joined = compact_join(categories)
         text_for_embedding = normalize_whitespace(f"{title}. {summary}")
