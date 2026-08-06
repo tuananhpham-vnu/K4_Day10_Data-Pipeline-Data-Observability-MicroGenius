@@ -1,6 +1,6 @@
 # Phase 1 — Baseline Evaluation Report
 
-- **Generated at:** 2026-08-06T09:19:29.243243Z
+- **Generated at:** 2026-08-06T10:01:04.183925Z
 - **Overall data status:** **PASS**
 - **Data quality:** PASS
 - **Freshness:** PASS
@@ -17,7 +17,7 @@
 | test_set_size | 20 |
 | collection_name | papers-baseline |
 | embedding_model | sentence-transformers/all-MiniLM-L6-v2 |
-| generated_at | 2026-08-06T09:18:15.186391+00:00 |
+| generated_at | 2026-08-06T09:59:31.824665+00:00 |
 
 ## 2. Retrieval and answer quality
 
@@ -87,8 +87,8 @@ The baseline dataset passed the configured quality and freshness gates. The RAG 
 ```json
 {
   "report_name": "phase1_quality",
-  "generated_at": "2026-08-06T09:19:29.226151Z",
-  "as_of": "2026-08-06T09:19:29.137440Z",
+  "generated_at": "2026-08-06T10:01:04.180923Z",
+  "as_of": "2026-08-06T10:01:04.178925Z",
   "source_timestamp": null,
   "row_count": 24,
   "column_count": 13,
@@ -193,8 +193,8 @@ The baseline dataset passed the configured quality and freshness gates. The RAG 
 
 ```json
 {
-  "generated_at": "2026-08-06T09:19:29.237027Z",
-  "as_of": "2026-08-06T09:19:29.233762Z",
+  "generated_at": "2026-08-06T10:01:04.182925Z",
+  "as_of": "2026-08-06T10:01:04.181924Z",
   "source_timestamp": null,
   "published_column": "published",
   "age_days_column": "age_days",

@@ -1,0 +1,18 @@
+{
+  "generated_at": "2026-08-06T10:03:10.025791Z",
+  "as_of": "2026-08-06T10:03:10.018791Z",
+  "source_timestamp": null,
+  "published_column": "published",
+  "age_days_column": "age_days",
+  "latest_published": "2026-07-13T00:00:00Z",
+  "oldest_published": "2025-04-03T00:00:00Z",
+  "maximum_age_days": 180,
+  "stale_rows": 2,
+  "fresh_rows": 22,
+  "future_rows": 0,
+  "invalid_date_rows": 0,
+  "valid_published_rows": 24,
+  "total_rows": 24,
+  "stale_ratio": 0.08333333333333333,
+  "is_fresh": false
+}

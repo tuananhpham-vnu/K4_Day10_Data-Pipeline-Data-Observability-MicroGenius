@@ -61,7 +61,7 @@ def _freshness_path(settings, name: str) -> Path:
 
 
 def main() -> None:
-    """TODO(student): xay dung corruption -> evaluate -> repair -> compare flow.
+    """Run corruption, evaluation, repair, and comparison flow.
 
     Pseudo-code:
     1. Load baseline metrics va clean dataset.

@@ -25,7 +25,7 @@
     "judge": {
       "score": 5,
       "correct": true,
-      "reasoning": "The model answer matches the reference answer exactly."
+      "reasoning": "The model answer is identical to the reference answer, providing an accurate summary of the paper's topic."
     }
   },
   {
@@ -54,7 +54,7 @@
     "judge": {
       "score": 5,
       "correct": true,
-      "reasoning": "The model answer correctly lists all the authors matching the reference answer."
+      "reasoning": "The model answer perfectly matches the reference answer containing all authors of the paper."
     }
   },
   {
@@ -83,7 +83,7 @@
     "judge": {
       "score": 5,
       "correct": true,
-      "reasoning": "The model answer matches the reference answer exactly."
+      "reasoning": "Fallback heuristic judge used because the LLM evaluator was unavailable (ChatGoogleGenerativeAIError)."
     }
   },
   {
@@ -112,7 +112,7 @@
     "judge": {
       "score": 5,
       "correct": true,
-      "reasoning": "Both the reference answer and the model answer correctly state that the categories are unknown."
+      "reasoning": "Both the reference answer and the model answer correctly state that the information is unknown."
     }
   },
   {
@@ -141,7 +141,7 @@
     "judge": {
       "score": 5,
       "correct": true,
-      "reasoning": "The model answer is an exact match to the reference answer."
+      "reasoning": "The model answer matches the reference answer exactly."
     }
   },
   {
@@ -170,7 +170,7 @@
     "judge": {
       "score": 5,
       "correct": true,
-      "reasoning": "The model answer exactly matches the reference answer and correctly identifies all the authors of the paper."
+      "reasoning": "The model answer exactly matches the reference answer and provides all the authors of the paper."
     }
   },
   {
@@ -228,7 +228,7 @@
     "judge": {
       "score": 5,
       "correct": true,
-      "reasoning": "Both the reference answer and the model answer correctly state that the categories are unknown."
+      "reasoning": "Both the reference answer and the model answer correctly state 'unknown' as the paper does not specify categories."
     }
   },
   {
@@ -257,7 +257,7 @@
     "judge": {
       "score": 5,
       "correct": true,
-      "reasoning": "The model answer matches the reference answer exactly and correctly."
+      "reasoning": "The model answer is identical to the reference answer."
     }
   },
   {
@@ -344,7 +344,7 @@
     "judge": {
       "score": 5,
       "correct": true,
-      "reasoning": "Both the reference answer and the model answer correctly state 'unknown' as the paper's categories are not specified in the context."
+      "reasoning": "Both the model answer and the reference answer correctly state 'unknown'."
     }
   },
   {
@@ -373,7 +373,7 @@
     "judge": {
       "score": 5,
       "correct": true,
-      "reasoning": "The model answer is identical to the reference answer and accurately reflects the topic."
+      "reasoning": "The model answer is identical to the reference answer and correctly states the context of the paper."
     }
   },
   {
@@ -402,7 +402,7 @@
     "judge": {
       "score": 5,
       "correct": true,
-      "reasoning": "The model answer matches the reference answer exactly."
+      "reasoning": "The model answer exactly matches the reference answer, listing all the correct authors for the specified paper."
     }
   },
   {
@@ -431,7 +431,7 @@
     "judge": {
       "score": 5,
       "correct": true,
-      "reasoning": "The model answer matches the reference date exactly."
+      "reasoning": "The model answer matches the reference answer exactly."
     }
   },
   {
@@ -460,7 +460,7 @@
     "judge": {
       "score": 5,
       "correct": true,
-      "reasoning": "Both the reference and model answers correctly identify the category as unknown."
+      "reasoning": "Both the reference answer and the model answer correctly state that the categories are unknown."
     }
   },
   {
@@ -489,7 +489,7 @@
     "judge": {
       "score": 5,
       "correct": true,
-      "reasoning": "The model answer matches the reference answer completely and accurately."
+      "reasoning": "The model answer matches the reference answer word-for-word and accurately addresses the prompt."
     }
   },
   {
@@ -518,7 +518,7 @@
     "judge": {
       "score": 5,
       "correct": true,
-      "reasoning": "The model answer correctly identifies the authors of the paper, matching the reference answer completely."
+      "reasoning": "The model answer perfectly matches the reference answer provided for the authors of the paper."
     }
   },
   {
@@ -576,7 +576,7 @@
     "judge": {
       "score": 5,
       "correct": true,
-      "reasoning": "The model answer correctly identifies the reference as unknown."
+      "reasoning": "Both the model answer and the reference answer correctly state that the categories are unknown."
     }
   }
 ]
