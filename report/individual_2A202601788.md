@@ -34,8 +34,6 @@
 
 | Nhiệm vụ đã thực hiện | File/hàm/artifact liên quan | Kết quả bàn giao | Cách xác minh |
 | --- | --- | --- | --- |
-| Tạo evaluation set ổn định từ cleaned data | `testset.py`, `data/eval/test_set.json` | 20 câu hỏi trên cùng test set cho baseline/corrupted/repaired | Kiểm tra `id`, `question_type`, `ground_truth_doc_ids` |
-| Tích hợp baseline pipeline | `phase1.py` | 24 clean papers, embedding manifest, baseline metrics và report | `python script/run_phase1.py` |
 | Tích hợp corruption → evaluate → repair | `corruption_flow.py`, `corruption.py` | Corruption log có 14 entries; metrics corrupted giảm và repaired phục hồi | `python script/run_corruption_flow.py` |
 | Kiểm tra retrieval contract | `index.py`, `qa.py` | Semantic search trả 4 kết quả; exact lookup theo ID/title hoạt động | Smoke query/lookup trên Chroma index |
 
